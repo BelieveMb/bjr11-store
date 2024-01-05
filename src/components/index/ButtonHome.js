@@ -1,25 +1,28 @@
-import { StyleSheet, Button } from 'react-native';
+import { StyleSheet, Pressable, Text  } from 'react-native';
 
 
-export default function ButtonHome({navigation}){
+export default function ButtonHome({navigation, textBtn}){
     return(
-        <Button 
-            title='Get Started'
-            color='#010422'
-            onPress={() =>navigation.navigate('SignIn')}            
-        />
+        // <Button 
+        //     title='Allons-y'
+        //     color='#010422'
+        //     onPress={() =>navigation.navigate('SignIn')}            
+        // />
+        <Pressable style={styles.btnCard} >
+            <Text style={{color: '#eceaea',fontSize: 22,textAlign: 'center'}} >{textBtn}</Text>
+        </Pressable>
+        
     )
 };
 
 const styles = StyleSheet.create({ 
     btnCard: {
         backgroundColor: '#010422',
-        color: '#eceaea',
         borderRadius: 18,
         borderWidth: 2,
         padding: 12,
-        fontSize: 17,
         fontFamily: 'Arial',
         width: 320,
+        
     },
 });
