@@ -1,14 +1,13 @@
 import { Image, View, StyleSheet, Button } from "react-native";
 import ConnexionBtn from "../components/index/ConnexionBtn";
-import BottomInfo from "../components/home/BottomInfo";
+import ButtonHome from "../components/index/ButtonHome";
+import BottomInfo from "../components/index/BottomInfo";
 
 
 
 export default function SignIn({navigation}) {
     const imgSign = require('../../assets/images/bg-index1.avif');
-    const btnIcon1 = require('../../assets/images/icons/mail.png');
-    const btnIcon2 = require('../../assets/images/icons/mail.png');
-    
+
     
     return(
     <View>
@@ -22,7 +21,7 @@ export default function SignIn({navigation}) {
                 <ConnexionBtn btnText="Continuer avec Apple" btnIcon="apple" />                
             </View>
 
-            {/* <BottomInfo textBottom="Already have an account" linkTo='register' textLink='Sign In' /> */}
+            <BottomInfo  textBottom="Already have an account" linkTo='register' textLink='Sign In'/>
         </View>
         
 
@@ -57,14 +56,13 @@ const styles = StyleSheet.create({
         marginBottom: 0,
         color: '#010422',
     },
-
     signBtns:{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 6,
-        marginVertical: 15,
+        gap: 3,
+        marginVertical: "1.5rem",
     },
 
   

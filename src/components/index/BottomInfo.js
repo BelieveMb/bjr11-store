@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     },
     bottomInfo:{
         textAlign: 'center',
-        marginTop: '5rem',
+        marginTop: '2rem',
         fontSize: "1.4rem",
     },
 
