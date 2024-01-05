@@ -15,7 +15,7 @@ export default function ConnexionBtn({navigation, btnText, btnIcon, matIcon, btn
 
 const styles = StyleSheet.create({
     connexionBtn:{
-        // backgroundColor: '#eceaea',
+        backgroundColor: '#eceaea',
         borderWidth: 1,
         borderStyle: 'solid',
         borderRadius: 30,
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
         fontWeight: 800,
         gap: 8,
         padding: 10,
-        width: 320,
         marginBottom: 10,
         
     }

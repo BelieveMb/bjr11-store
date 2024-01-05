@@ -7,8 +7,8 @@ export default function FormHomeBottomButtons() {
         <>
             <Text style={{textAlign:'center'}}> or Sign in with :</Text>
             <View style={ styles.connexionBloc}>
-                <ConnexionBtn btnText='Google' linkTo='Home' btnColor='#ff1'  />
-                <ConnexionBtn btnText='Apple' linkTo='Home' btnColor='#520' />
+                <ConnexionBtn btnText='Google' linkTo='Home' btnIcon='google'  />
+                <ConnexionBtn btnText='Apple' linkTo='Home' btnIcon='apple' />
             </View>
             <BottomInfo textBottom="Don't have an account ?" textLink="Sign Up" linkTo="Register" />
 
