@@ -12,6 +12,7 @@ export default function FormHomeTitle({titleText, subTitle}) {
 const styles = StyleSheet.create({
     titles:{
         lineHeight: 30,
+        marginVertical: '2rem',
     },
     signInTitle:{
         fontWeight: 800,

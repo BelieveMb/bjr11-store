@@ -1,23 +1,26 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
 import SignInput from "../components/index/SignInput";
 import ConnexionBtn from "../components/index/ConnexionBtn";
 import FormHomeBottomButtons from "../components/index/FormHomeBottomButtons";
 import FormHomeTitle from "../components/index/FormHomeTitle";
 import FormHomeLogo from "../components/index/FormHomeLogo";
+import ButtonHome from "../components/index/ButtonHome";
 
 export default function SignInConnexion() {
 
     return(
         <View style={styles.signIn} >
             <FormHomeLogo />
+
             <FormHomeTitle titleText="Welcome back !" subTitle='Choisissez le premier ur-i dans le tableau.' />
 
-            <SignInput  placeholder="believe@gmail.com"  editable="false" />
-            <SignInput placeholder='☻☻☻☻☻☻☻☻☻☻☻' editable="true" />
+            <SignInput  value="believe@gmail.com"  hidden="false" inputIcon="mail" editable="false" />
+            <SignInput placeholder='☻☻☻☻☻☻☻☻☻☻☻' hidden="true" editable="true" />
+           
             <View style={styles.blocMdp}>
                 <span style={styles.mdpForgot} >Password forgot</span>
             </View>
-            <ConnexionBtn btnText='Sign in' linkTo='Home' />
+            <ButtonHome textBtn="Sign in" />
             <FormHomeBottomButtons />
         </View>
   );
@@ -25,6 +28,7 @@ export default function SignInConnexion() {
 
 
 const styles = StyleSheet.create({
+
     signIn:{
         paddingHorizontal: 25,
         paddingVertical: 20,

@@ -1,22 +1,17 @@
-import {  StyleSheet, Text } from "react-native";
+import {  StyleSheet, Image } from "react-native";
 
 export default function FormHomeLogo() {
-    
+    const logo = require('../../../assets/images/logo.png');
     return(
-        <Text style={styles.logo}>B</Text>
+        <Image source={logo} style={styles.logo} />
     );
 };
 
 
 const styles = StyleSheet.create({
     logo:{
-        backgroundColor: '#ff0303',
-        color: '#eceaea',
-        width: 25,
-        borderRadius: '100%',
-        fontWeight: 700,
-        padding: '1rem',
-        fontSize: '2rem',
-        textAlign: 'center',
+        width: 90,
+        height: 60,
+        borderRadius: '4%',
     },
 });

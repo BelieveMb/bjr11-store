@@ -1,13 +1,16 @@
 import { Image, View, StyleSheet, TextInput } from "react-native";
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 
 
-export default function SignInput({placeholder, myStyle, editable}){
+export default function SignInput({placeholder, hidden, editable, value, inputIcon}){
     return(
         <View style={styles.signBtn}>
-            <b>♥</b>
+            <MaterialIcons name={inputIcon} size={24} color="black" />
             <TextInput 
                 placeholder={placeholder}
-                editable={editable}                
+                editable={{editable}}
+                value={value}
+                style={{fontSize:'1.5rem'}}
             >
             </TextInput>
         </View>
@@ -18,17 +21,19 @@ export default function SignInput({placeholder, myStyle, editable}){
 
 const styles = StyleSheet.create({
     signBtn:{
-        // backgroundColor: '#fff',
+        backgroundColor: '#eceaea',
         borderWidth: 3,
         borderStyle: 'solid',
         borderRadius: 20,
         display: 'flex',
         flexDirection: "row",
-        justifyContent: 'flex',
+        justifyContent: 'center',
+        alignContent: 'center',
+        alignItems: 'center',
         gap: 8,
-        padding: 10,
+        padding: 5,
         width: 320,
-        marginBottom: 10,
-        fontSize: '1.2rem',        
+        marginBottom: 5,
+        fontSize: '1.8rem',        
     }
 });

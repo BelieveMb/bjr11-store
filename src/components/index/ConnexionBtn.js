@@ -2,7 +2,7 @@ import  { Pressable, Text, StyleSheet } from 'react-native';
 import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 
 
-export default function ConnexionBtn({navigation, btnText, btnIcon, matIcon, linkTo}){
+export default function ConnexionBtn({navigation, btnText, btnIcon, matIcon, btnStyle, linkTo}){
   return(
     
     <Pressable style={styles.connexionBtn} >
@@ -15,7 +15,7 @@ export default function ConnexionBtn({navigation, btnText, btnIcon, matIcon, lin
 
 const styles = StyleSheet.create({
     connexionBtn:{
-        backgroundColor: '#eceaea',
+        // backgroundColor: '#eceaea',
         borderWidth: 1,
         borderStyle: 'solid',
         borderRadius: 30,

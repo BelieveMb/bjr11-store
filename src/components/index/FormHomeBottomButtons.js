@@ -22,5 +22,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent:'space-between', 
         gap: 10, 
+        width: 320,
     },
 })
