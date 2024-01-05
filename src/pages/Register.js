@@ -3,17 +3,20 @@ import SignInput from "../components/index/SignInput";
 import ConnexionBtn from "../components/index/ConnexionBtn";
 import FormHomeBottomButtons from "../components/index/FormHomeBottomButtons";
 import FormHomeTitle from "../components/index/FormHomeTitle";
+import ButtonHome from "../components/index/ButtonHome";
+import SymbolTitle from "../components/index/SymbolTitle";
 
 export default function Register(){
   return(
     <View style={styles.signIn} >
+        <SymbolTitle symbolIcon="close" />
         <FormHomeTitle titleText="Welcome !" subTitle='Choisissez le premier ur-i dans le tableau.' />
 
-        <SignInput  placeholder="Votre nom complet"  />
-        <SignInput  placeholder="Votre mail "  />
-        <SignInput placeholder='☻☻☻☻☻☻☻☻☻☻☻' />
+        <SignInput  placeholder="Votre nom complet"  inputIcon="person"   />
+        <SignInput  placeholder="Votre mail " inputIcon="mail" />
+        <SignInput placeholder='☻☻☻☻☻☻☻☻☻☻☻' inputIcon="lock"/>
        
-        <ConnexionBtn btnText='Sign in' linkTo='Home' btnColor="#010422" />
+        <ButtonHome textBtn="Sign Up" />
         <FormHomeBottomButtons />
     </View>
   );
