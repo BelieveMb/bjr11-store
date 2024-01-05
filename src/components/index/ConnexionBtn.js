@@ -1,28 +1,31 @@
-import  { Button, StyleSheet } from 'react-native';
+import  { Pressable, Text, StyleSheet } from 'react-native';
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 
-export default function ConnexionBtn({navigation, btnText, btnColor, linkTo}){
+
+export default function ConnexionBtn({navigation, btnText, btnIcon, matIcon, linkTo}){
   return(
-    <Button
-            title={btnText}
-            color={btnColor}
-            onPress={() =>navigation.navigate({linkTo})}
-    />
+    
+    <Pressable style={styles.connexionBtn} >
+          <MaterialIcons name={matIcon} size={24} color="black" />
+          <FontAwesome name={btnIcon} size={24} color="black" />
+         <Text style={{color: '#010422',fontSize: 22,textAlign: 'center'}} >{btnText}</Text>
+    </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
-    signBtn:{
+    connexionBtn:{
         backgroundColor: '#eceaea',
         borderWidth: 1,
         borderStyle: 'solid',
-        borderRadius: 20,
+        borderRadius: 30,
         display: 'flex',
         flexDirection: "row",
         justifyContent: 'center',
         textAlign: 'center',
         fontWeight: 800,
         gap: 8,
-        padding: 16,
+        padding: 10,
         width: 320,
         marginBottom: 10,
         

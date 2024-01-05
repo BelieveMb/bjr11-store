@@ -9,6 +9,7 @@ import Register from './src/pages/Register';
 import NewPassword from './src/pages/NewPassword';
 import NewPasswordCheck from './src/pages/NewPasswordCheck';
 import HomePage from './src/pages/HomePage';
+import SignIn from './src/pages/SignIn';
 
 
 // const Stack = createNativeStackNavigator();
@@ -17,7 +18,7 @@ import HomePage from './src/pages/HomePage';
 
 export default function App() {
   return (
-    <Index />
+    <SignIn />
     // <NavigationContainer >
     //   <Stack.Navigator>
     //         <Stack.Screen 

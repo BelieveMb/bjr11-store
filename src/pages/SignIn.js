@@ -1,27 +1,28 @@
 import { Image, View, StyleSheet, Button } from "react-native";
-import SignBtn from "../components/home/signBtn";
-import ConnexionBtn from "../components/home/ConnexionBtn";
+import ConnexionBtn from "../components/index/ConnexionBtn";
 import BottomInfo from "../components/home/BottomInfo";
 
 
 
 export default function SignIn({navigation}) {
-    const imgSign = require('../../assets/images/signImg.png')
-  return(
+    const imgSign = require('../../assets/images/bg-index1.avif');
+    const btnIcon1 = require('../../assets/images/icons/mail.png');
+    const btnIcon2 = require('../../assets/images/icons/mail.png');
+    
+    
+    return(
     <View>
         <Image source={imgSign} style={styles.signImg} />
         <View style={styles.signin} >
             <span style={styles.signTitle} >Bjr 11 Store</span>
-            <span>
-                What fI suspect is occurring is you  and ran.
-            </span>
+            <span> Où chaque achat devient une expérience incroyable</span>
             <View style={styles.signBtns}>
-                <ConnexionBtn navigation={navigation} btnText='Continue with Email' linkTo='SignInConnexion' />
-                <ConnexionBtn navigation={navigation} btnText='Continue with Google'  linkTo='SignInConnexion' />
-                <ConnexionBtn navigation={navigation} btnText='Continue with Apple'  linkTo='SignInConnexion' />
+                <ConnexionBtn btnText="Continuer avec Email" matIcon="mail" />
+                <ConnexionBtn btnText="Continuer avec Google" btnIcon="google-plus" />
+                <ConnexionBtn btnText="Continuer avec Apple" btnIcon="apple" />                
             </View>
 
-            <BottomInfo textBottom="Already have an account" linkTo='register' textLink='Sign In' />
+            {/* <BottomInfo textBottom="Already have an account" linkTo='register' textLink='Sign In' /> */}
         </View>
         
 
@@ -33,7 +34,7 @@ export default function SignIn({navigation}) {
 const styles = StyleSheet.create({
     signImg:{
         width: 390,
-        height: 280,
+        height: 320,
         borderBottomLeftRadius: 18,
         borderBottomRightRadius: 18,
         borderWidth: 2,

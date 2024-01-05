@@ -3,11 +3,6 @@ import { StyleSheet, Pressable, Text  } from 'react-native';
 
 export default function ButtonHome({navigation, textBtn}){
     return(
-        // <Button 
-        //     title='Allons-y'
-        //     color='#010422'
-        //     onPress={() =>navigation.navigate('SignIn')}            
-        // />
         <Pressable style={styles.btnCard} >
             <Text style={{color: '#eceaea',fontSize: 22,textAlign: 'center'}} >{textBtn}</Text>
         </Pressable>
