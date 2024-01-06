@@ -18,7 +18,7 @@ import SignIn from './src/pages/SignIn';
 
 export default function App() {
   return (
-    <NewPassword />
+    <NewPasswordCheck />
     // <NavigationContainer >
     //   <Stack.Navigator>
     //         <Stack.Screen 
