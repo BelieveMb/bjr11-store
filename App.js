@@ -18,7 +18,7 @@ import SignIn from './src/pages/SignIn';
 
 export default function App() {
   return (
-    <Register />
+    <NewPassword />
     // <NavigationContainer >
     //   <Stack.Navigator>
     //         <Stack.Screen 

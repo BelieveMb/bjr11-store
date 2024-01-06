@@ -3,18 +3,21 @@ import SignInput from "../components/index/SignInput";
 import ConnexionBtn from "../components/index/ConnexionBtn";
 import FormHomeBottomButtons from "../components/index/FormHomeBottomButtons";
 import FormHomeTitle from "../components/index/FormHomeTitle";
+import SymbolTitle from "../components/index/SymbolTitle";
+import ButtonHome from "../components/index/ButtonHome";
 
 export default function NewPassword(){
   return(
     <View style={styles.signIn} >
-        <FormHomeTitle titleText="New Password !" subTitle='Choisissez le premier ur-i dans le tableau.' />
+        <SymbolTitle symbolIconFont="arrow-left" />
+        <FormHomeTitle titleText="Nouveau Password" subTitle='Choisissez le premier ur-i dans le tableau.' />
 
-        <SignInput  placeholder="Votre nom complet"  />
-        <Text> Choisissez le premier ur-i dans le tableau. Choisissez le premier ur-i dans le tableau.</Text>
-        <SignInput  placeholder="Believe@gmail.com "  />
+        <SignInput  placeholder="☻☻☻☻☻☻☻☻☻☻" inputIcon="lock" />
+        <Text style={{width:'18rem'}}> Choisissez le mot de passe pour votre compte, et confirmez.</Text>
+        <SignInput  placeholder=" votre mot de passe " inputIcon="lock"  />
        
         <View style={{marginTop: '12rem'}}>
-          <ConnexionBtn btnText='Continue' linkTo='Home' btnColor="#010422" />
+          <ButtonHome textBtn="Continue" />
         </View>
     </View>
   );
@@ -26,6 +29,6 @@ const styles = StyleSheet.create({
       paddingVertical: 20,
       display: 'flex',
       flexDirection: 'column',
-      gap: 20,
+      gap: 10,
   },
 })
