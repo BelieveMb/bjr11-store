@@ -7,6 +7,7 @@ import ProductData from '../datas/ProductData';
 import ProductCard from '../components/home/ProductCard';
 import ButtonHome from '../components/index/ButtonHome';
 import HomeStyles from '../styles/homeStyle';
+import ArticleCard from '../components/home/ArticleCard';
 
 const bannerShoes = require('../../assets/images/shoes.jpg');
 const productImage = require('../../assets/images/cloths/sweater.jpg');
@@ -32,27 +33,23 @@ export default function FlashSale() {
                
             </View>
 
-            <View style={{display: 'flex', flexDirection: 'row', gap:8, width: 200, marginVertical: '1.2rem'}}>
-                <ImageBackground style={HomeStyles.productCard} imageStyle={{ borderRadius: '1.6rem'}} source={productImage} resizeMode='cover' >
-                    <Text style={{backgroundColor: '#ff0303', color: '#fff', padding:'0.2rem', borderRadius: '0.5rem', width: 'auto', height: '1.5rem'}}>
-                        New
-                    </Text>                     
-               </ImageBackground>
-                <View>
-                    <Text style={{fontSize:'2rem', marginBottom: '2rem'}} >Hoddie Green</Text>
-                    <View style={{display: 'flex', flexDirection: 'row', gap:8, alignItems: 'center', justifyContent: 'space-between'}}>
-                        <View style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start' }}>
-                            <Text style={{fontSize: "1rem", marginBottom:'0.2rem'  }}>Qté. 10</Text>
-                            <Text style={{fontSize: "1.4rem", color:'#ff0303', fontWeight: '600' }}>$59.00</Text>
-                        </View>
-                        <Pressable style={HomeStyles.btnCard}  >
-                            <MaterialIcons name='shopping-cart' size={24} color="#eceaea" />
+            <FlatList
+                style={{ gap: '1rem'}}
+                data={products}
+                renderItem={({item}) => 
+                    <ArticleCard mode="New"
+                        articleImage={item.productImage}
+                        articleName={item.productName}
+                        articleQuantity={item.productQuantity}
+                        articlePrice={item.productPrice}
+                />}
+                keyExtractor={item => item.productId}
+                // ItemSeparatorComponent={myItemSeparator}
+            />
 
-                            <Text style={{color: '#eceaea',fontSize: 15,textAlign: 'center'}} >Acheter</Text>
-                        </Pressable>
-                    </View>
-                </View>
-            </View>
+           
+
+           
 
 
         </View>
