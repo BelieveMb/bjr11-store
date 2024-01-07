@@ -17,7 +17,7 @@ export default function FlashSale() {
 
     return(
         <View style={HomeStyles.container}>
-            <ProductBanner bgBbanner={bannerShoes} bannerTitle="Flash Sale" bannerSubTitle="RN  provides a suite" bannerButton="Get in Now" />
+            <ProductBanner bgBbanner={bannerShoes} bannerTitle="Flash Sale" bannerSubTitle="RN  provides a suite" bannerButton="24-15 jan" />
             <CategorieTitle titleCategorie='Nos articles'  />
             <View style={HomeStyles.blocCat} >
                     <FlatList
