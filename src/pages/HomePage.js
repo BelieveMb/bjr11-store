@@ -4,11 +4,13 @@ import CategorieTitle from '../components/home/CategorieTitle';
 import CategorieList from '../components/home/CategorieList';
 import ProductCard from '../components/home/ProductCard';
 import ProductData from '../datas/ProductData';
+import Banner from '../components/home/Banner';
+import ProductBanner from '../components/home/ProductBanner';
 
 
 export default function HomePage(){
     const products = ProductData;
-    const bannerImage = require('../../assets/images/sweaterBanner3.jpg');
+    const bannerImage2 = require('../../assets/images/sweaterBanner3.jpg');
     const myItemSeparator = () => {
         return <View style={{ height: 1, backgroundColor: "#ff0303",marginHorizontal:10}} />;
     };
@@ -57,27 +59,8 @@ export default function HomePage(){
                     
                 </View>
 
-                
-                <ImageBackground style={styles.banner} imageStyle={{ borderRadius: '1.6rem'}} source={bannerImage} resizeMode='cover' >
-                    <Text style={{fontSize: '2rem', fontWeight: 600}} >Full Color Holdie</Text>
-                    <Text style={{fontSize: '1rem', color: "#ff0303"}} >RN  provides a suite  </Text>
-                    <View style={{width: '40%', marginTop:'4.5rem'}}>
-                        <TouchableHighlight 
-
-                            style={{ 
-                                backgroundColor: '#ff0303',
-                                borderRadius:10,
-                                justifyContent: 'center', 
-                                alignItems:'center',
-                                paddingVertical: '0.4rem',
-                                fontWeight: 700
-                                }}
-                        >
-                            <Text>Get in Now</Text>
-                        </TouchableHighlight>
-                    </View>
-                    
-                </ImageBackground>
+                <ProductBanner bgBbanner={bannerImage2} bannerTitle="Full Color Holdie" bannerSubTitle="RN  provides a suite" bannerButton="Get in Now" />
+                {/* <Banner bannerImage={bannerImage2}   /> */}
 
                 <CategorieTitle titleCategorie='Top Brand' />
                 <View style={styles.blocCat} >
@@ -111,7 +94,7 @@ export default function HomePage(){
                                 productQuantity={item.productQuantity}
                             /> }
                         keyExtractor={item => item.productId}
-                    />
+                    /> 
                 </View>                
 
             </View>
@@ -127,6 +110,7 @@ const styles = StyleSheet.create({
         color: '#222',
         paddingHorizontal: '1rem',
         paddingVertical: '1.5rem',
+        width: 395,
       },
     page:{
         backgroundColor: '#fff',
@@ -149,13 +133,5 @@ const styles = StyleSheet.create({
         width: '12rem',
         padding: '1.5rem',
     },
-    banner:{
-        display: 'flex',
-        flexDirection: 'column',
-        height: '13rem',
-        width: '100%',
-        padding: '1.5rem',
-        marginVertical: '2rem',
-
-    },
+   
 });
