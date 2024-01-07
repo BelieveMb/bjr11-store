@@ -12,7 +12,7 @@ export default function ArticleCard({mode, articleImage, articleName, articleQua
             </Text>                     
        </ImageBackground>
         <View>
-            <Text style={{fontSize:'1.8rem', marginBottom: '2rem', width: 180}} > {articleName} </Text>
+            <Text style={{fontSize:'1.8rem', marginBottom: '2rem', width: 180}} > {articleName.split("",12)} </Text>
             <View style={{display: 'flex', flexDirection: 'row', gap:8, alignItems: 'center', justifyContent: 'space-between'}}>
                 <View style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start' }}>
                     <Text style={{fontSize: "1rem", marginBottom:'0.2rem'  }}>Qté. {articleQuantity}</Text>
