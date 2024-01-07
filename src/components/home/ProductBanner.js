@@ -22,7 +22,7 @@ export default function ProductBanner({bgBbanner, bannerTitle, bannerSubTitle, b
                     >
                         <Text>{bannerButton}</Text>
                     </TouchableHighlight>
-                   :<Text style={{color:'#13141d', display: 'flex', flexDirection:'row', gap: 14, justifyContent: 'center', fontSize: '1.2rem'}}>
+                   :<Text style={{color:'#13141d', display: 'flex', flexDirection:'row', gap: 14, justifyContent: 'center', alignContent:"flex-start", fontSize: '1.2rem'}}>
                         {bannerLink} 
                         <FontAwesome name='arrow-right' size={25} />
                     </Text>   
