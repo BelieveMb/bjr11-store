@@ -13,6 +13,7 @@ import SignIn from './src/pages/SignIn';
 import FlashSale from './src/pages/FlashSale';
 import Shop from './src/pages/Shop';
 import Search from './src/pages/Search';
+import CategorieDetail from './src/pages/CategorieDetail';
 
 
 // const Stack = createNativeStackNavigator();
@@ -21,7 +22,7 @@ import Search from './src/pages/Search';
 
 export default function App() {
   return (
-    <Search />
+    <CategorieDetail />
     // <NavigationContainer >
     //   <Stack.Navigator>
     //         <Stack.Screen 
