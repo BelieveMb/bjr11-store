@@ -29,6 +29,22 @@ const  HomeStyles = StyleSheet.create({
         fontFamily: 'Arial',
         width: '6rem',
     },
+    contentCat: {
+        display:'flex', 
+        flexDirection:'column', 
+        gap:'0.4rem', 
+        alignItems:'center', 
+        justifyContent:'center',
+    },
+    shopCard: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignContent: 'center',
+        flexWrap: 'wrap',
+        gap: '2rem',
+    },
+
+    blockCat: {backgroundColor: '#7e7a7a', display: 'flex', flexDirection: 'column', gap: 4, padding: 4, }
 });
 
 export default HomeStyles
