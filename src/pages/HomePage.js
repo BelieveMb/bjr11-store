@@ -4,7 +4,6 @@ import CategorieTitle from '../components/home/CategorieTitle';
 import CategorieList from '../components/home/CategorieList';
 import ProductCard from '../components/home/ProductCard';
 import ProductData from '../datas/ProductData';
-import Banner from '../components/home/Banner';
 import ProductBanner from '../components/home/ProductBanner';
 
 
@@ -54,13 +53,9 @@ export default function HomePage(){
                         keyExtractor={item => item.productId}
                         ItemSeparatorComponent={myItemSeparator}
                     />
-                    
-
-                    
                 </View>
 
                 <ProductBanner bgBbanner={bannerImage2} bannerTitle="Full Color Holdie" bannerSubTitle="RN  provides a suite" bannerButton="Get in Now" />
-                {/* <Banner bannerImage={bannerImage2}   /> */}
 
                 <CategorieTitle titleCategorie='Top Brand' />
                 <View style={styles.blocCat} >
